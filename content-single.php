@@ -8,9 +8,9 @@
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
-		<div class="entry-meta">
-			<?php sanctuary_posted_on(); ?>
-		</div><!-- .entry-meta -->
+<!--		<div class="entry-meta"> -->
+<!--			<?php sanctuary_posted_on(); ?> -->
+<!--		</div> .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -57,6 +57,6 @@
 			);
 		?>
 
-		<?php edit_post_link( __( 'Edit', 'sanctuary' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
+<!--		<?php edit_post_link( __( 'Edit', 'sanctuary' ), '<span class="edit-link">', '</span>' ); ?> -->
+<!--	</footer> .entry-meta -->
 </article><!-- #post-## -->
