@@ -131,7 +131,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -139,6 +139,33 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
+.site-title {
+	font-family: "arvo", serif;
+	font-size: 5.25em;
+	font-weight: bold;
+	letter-spacing: -2px;
+}
+
+.site-title a, .site-title a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+.site-description {
+	font-family: "open-sans-condensed", sans-serif;
+	font-size: 1.75em;
+	color: #fff;
+	letter-spacing: -1.5px;
+}
+
+.main-navigation {
+	font-family: arvo;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -336,21 +363,43 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+4.5 Masthead
+--------------------------------------------------------------*/
+
+#masthead {
+	position: relative;
+}
+
+.site-title {
+	position: fixed;
+	top: 0.3em;
+	left: 4.16667%;
+	z-index: 4;
+}
+
+.site-description {
+	position: fixed;
+	top: 4em;
+	left: 4.16667%;
+	z-index: 4;
+}
+
+/*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #fff;
 }
 a:visited {
-	color: purple;
+	color: #fff;
 }
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -361,11 +410,17 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+	position: fixed;
+	top: 6em;
+	background-color: rgba(0,0,0,0.6);
+	padding-left: 50%;
+	z-index: 3;
 }
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	position: relative;
 }
 .main-navigation li {
 	float: left;
@@ -374,14 +429,27 @@ a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	padding: 0.65em;
+	padding-top: 2.35em;
+	padding-bottom: 2.15em;
 }
-.main-navigation ul ul {
+.main-navigation li:first-of-type a{
+	padding-left: 0;
+}
+.main-navigation li:last-of-type a{
+	padding-right: 0;
+}
+.main-navigation ul li {
+	position: relative;
+}
+.main-navigation ul li ul {
+	width: 209px;
+	background-color: #e4e4e4;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
-	float: left;
-	left: 0;
+	float: none;
 	position: absolute;
-	top: 1.5em;
+	left: -50%;
 	z-index: 99999;
 }
 .main-navigation ul ul ul {
@@ -389,19 +457,52 @@ a:active {
 	top: 0;
 }
 .main-navigation ul ul a {
-	width: 200px;
+	color: #000;
+	font-size: 0.8em;
+	text-align: center;
+	letter-spacing: 0px;
+	padding-top: 0.7em;
+	padding-bottom: 0.8em;
 }
+
+.main-navigation ul ul a:first-of-type {
+	padding-top: 1.65em;
+}
+
 .main-navigation ul ul li {
+	width: 100%;
+	text-align: center;
+	border-top: 1px solid #d7d7d7;
 }
-.main-navigation li:hover > a {
+
+.main-navigation ul ul li:first-of-type {
+	border-top: none;
 }
-.main-navigation ul ul :hover > a {
+
+.main-navigation ul ul li:first-child a:before{
+    content: '';
+    position: absolute;
+    left: 84px;
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #e4e4e4;
+}
+
+.main-navigation li li:hover > a {
+	background-color: #888;
+}
+.main-navigation ul ul:hover > a {
+
 }
 .main-navigation ul ul a:hover {
 }
 .main-navigation ul li:hover > ul {
 	display: block;
 }
+
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
 }
@@ -578,6 +679,169 @@ a:active {
 	word-wrap: break-word;
 }
 .bypostauthor {
+}
+
+/*--------------------------------------------------------------
+10.4 Homepage
+--------------------------------------------------------------*/
+
+.page-template-home-page-php {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/*--------------------------------------------------------------
+10.4.1 Typography
+--------------------------------------------------------------*/
+
+.page-template-home-page-php h3 {
+	font-family: "arvo", serif;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.9em;
+	text-transform: uppercase;
+	z-index: 2;
+}
+
+.page-template-home-page-php h4 {
+	font-family: "open-sans-condensed", sans-serif;
+	color: #fff;
+	font-weight: 300;
+	font-size: 2.5em;
+	letter-spacing: -0.5px;
+	z-index: 1;
+}
+
+/*--------------------------------------------------------------
+10.4.2 Text Positioning and Instance-Specific Typography
+--------------------------------------------------------------*/
+
+.page-template-home-page-php .group1 h3 {
+	position: absolute;
+	top: 19em;
+	left: 57%;
+}
+
+.page-template-home-page-php .group1 h4 {
+	position: absolute;
+	top: 14.85em;
+	left: 68.2291667%;
+}
+
+.page-template-home-page-php .group2 h3 {
+	position: absolute;
+	top: 44em;
+	left: 21%;
+}
+
+.page-template-home-page-php .group2 h4 {
+	position: absolute;
+	top: 33.85em;
+	left: 13%;
+}
+
+.page-template-home-page-php .group3 h3 {
+	position: absolute;
+	top: 77.75em;
+	left: 38.5%;
+	color: #000;
+}
+
+.page-template-home-page-php .group3 h4 {
+	position: absolute;
+	top: 59.55em;
+	left: 44%;
+	color: #000;
+	letter-spacing: 0px;
+}
+
+.page-template-home-page-php .group4 h3 {
+	position: absolute;
+	top: 101.9em;
+	left: 62%;
+}
+
+.page-template-home-page-php .group4 h4 {
+	position: absolute;
+	top: 77.9em;
+	left: 19%;
+}
+
+.page-template-home-page-php .group5 h3 {
+	position: absolute;
+	top: 127.1em;
+	left: 5.25%;
+}
+
+.page-template-home-page-php .group5 h4 {
+	position: absolute;
+	top: 96.9em;
+	left: 4.1%;
+}
+
+/*--------------------------------------------------------------
+10.4.3 Image Positioning
+--------------------------------------------------------------*/
+
+.page-template-home-page-php .group1 img {
+	position: absolute;
+	top: 0;
+}
+
+.page-template-home-page-php .group2 img {
+	position: absolute;
+	top: 864px;
+}
+
+.page-template-home-page-php .group3 img {
+	position: absolute;
+	top: 1728px;
+}
+
+.page-template-home-page-php .group4 img {
+	position: absolute;
+	top: 2592px;
+}
+
+.page-template-home-page-php .group5 img {
+	position: absolute;
+	top: 3316px;
+}
+
+/*--------------------------------------------------------------
+10.5 Footer
+--------------------------------------------------------------*/
+
+.page-template-home-page-php footer {
+	width: 100%;
+	position: absolute;
+	top: 3952px;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.page-template-home-page-php footer ul {
+	float: left;
+	padding-top: 1.25em;
+	margin-left: 2.5%;
+	margin-bottom: 1.3em;
+}
+
+.page-template-home-page-php footer ul li {
+	display: inline;
+	margin-right: 7%;
+}
+
+.page-template-home-page-php .copyright {
+	float: left;
+	color: #fff;
+	font-size: 0.7em;
+	padding-top: 5.2em;
+	margin-left: 49.5%;
+}
+
+.page-template-home-page-php .copyright p {
+	margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------

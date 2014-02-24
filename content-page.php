@@ -11,12 +11,7 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
-	<!-- Custom Fields for the Homepage -->
-	<p><?php the_field('description'); ?></p>
-	<p><?php the_field('modifier'); ?></p>
-	<img src="<?php the_field('background_image'); ?>" alt="" />
-	
-		<!-- Custom Fields for the Cabin Page -->
+	<!-- Custom Fields for the Cabin Page -->
 	<img src="<?php the_field('hero_image'); ?>" alt="" />
 	<?php $image = wp_get_attachment_image_src(get_field('thumbnail_image'), 'full'); ?>
 	<img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('thumbnail_image')) ?>" />
