@@ -822,6 +822,7 @@ a:active {
 
 .page-template-home-page-php footer ul {
 	float: left;
+	width: 242px;
 	padding-top: 1.25em;
 	margin-left: 2.5%;
 	margin-bottom: 1.3em;
