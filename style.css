@@ -372,14 +372,13 @@ textarea {
 
 .site-title {
 	position: fixed;
-	top: 0.3em;
 	left: 4.16667%;
 	z-index: 4;
 }
 
 .site-description {
 	position: fixed;
-	top: 4em;
+	top: 3em;
 	left: 4.16667%;
 	z-index: 4;
 }
@@ -411,7 +410,7 @@ a:active {
 	float: left;
 	width: 100%;
 	position: fixed;
-	top: 6em;
+	top: 4.3em;
 	background-color: rgba(0,0,0,0.6);
 	padding-left: 50%;
 	z-index: 3;
@@ -810,17 +809,133 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-10.5 Footer
+10.5 Cabin Pages
 --------------------------------------------------------------*/
 
-.page-template-home-page-php footer {
+.single-cabin #page {
+	width: 960px;
+	height: 864px;
+	background-image: url("img/background.jpg");
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	margin-left: auto;
+}
+
+.single-cabin #main {
+	background-color: #fff;
+	margin: 0;
+	margin-top: 9.2em;
+}
+
+.cabin-images {
+	float: left;
+	width: 53.125%;
+	margin-left: 4.16667%;
+}
+
+.single-cabin .cabin-hero {
+	margin-top: 2.35em;
+	line-height: 0;
+}
+
+.cabin-thumbnails {
+	width: 100%;
+	list-style-type: none;
+	margin-top: 0.25em;
+	margin-left: 112.5%;
+}
+
+.cabin-thumbnails li  {
+	display: inline;
+	padding-right: 5%;
+}
+
+.cabin-thumbnails li:last-of-type {
+	padding-right: 0;
+}
+
+.cabin-thumbnails img {
+	width: 50px;
+	height: 50px;
+}
+
+.cabin-description {
+	float: left;
+	width: 32%;
+	margin-left: 5.20833%;
+	margin-right: 4%;
+}
+
+.cabin-description h3 {
+	margin-top: 2em;
+	margin-bottom: 1.1em;
+	font-family: "arvo";
+	text-transform: uppercase;
+	font-size: 1.05em;
+}
+
+.cabin-description h4 {
+	margin-top: 1.3em;
+	font-size: .9em;
+	font-weight: bold;
+	line-height: 1.2;
+}
+
+.cabin-description h5 {
+	margin-top: 1.3em;
+	font-size: .9em;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+.cabin-description a {
+	text-decoration: none;
+	color: #609012;
+	font-weight: bold;
+}
+
+.cabin-description p {
+	line-height: 1.2;
+	font-size: .9em;
+	margin: 0;
+}
+
+.cabin-description button {
+	background-color: #5e7833;
+	text-shadow: none;
+	box-shadow: none;
+	padding: 1em;
+	border: none;
+	border-radius: 0;
+	margin-top: 1.7em;
+	margin-bottom: 5.2em;
+}
+
+.cabin-description button a {
+	color: #fff;
+	text-transform: lowercase;
+	font-size: 1.2em;
+}
+
+/*--------------------------------------------------------------
+10.6 Footer
+--------------------------------------------------------------*/
+
+footer {
 	width: 100%;
 	position: absolute;
-	top: 3952px;
 	background-color: rgba(0,0,0,0.6);
 }
 
-.page-template-home-page-php footer ul {
+.page-template-home-page-php footer  {
+	top: 3952px;
+}
+
+.single-cabin footer {
+	top: 777px;
+}
+
+footer ul {
 	float: left;
 	width: 242px;
 	padding-top: 1.25em;
@@ -828,12 +943,12 @@ a:active {
 	margin-bottom: 1.3em;
 }
 
-.page-template-home-page-php footer ul li {
+footer ul li {
 	display: inline;
 	margin-right: 7%;
 }
 
-.page-template-home-page-php .copyright {
+.copyright {
 	float: left;
 	color: #fff;
 	font-size: 0.7em;
@@ -841,7 +956,7 @@ a:active {
 	margin-left: 49.5%;
 }
 
-.page-template-home-page-php .copyright p {
+.copyright p {
 	margin-bottom: 0;
 }
 

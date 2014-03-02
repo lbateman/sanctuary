@@ -94,6 +94,43 @@ function sanctuary_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'sanctuary_scripts' );
 
+add_action( 'init', 'create_my_post_types' );
+
+/**
+ * Create custom post types.
+ */
+function create_my_post_types() {
+ register_post_type( 'cabin', 
+ array(
+      'labels' => array(
+      	'name' => __( 'Cabins' ),
+      	'singular_name' => __( 'Cabin' ),
+      	'add_new' => __( 'Add New' ),
+      	'add_new_item' => __( 'Add New Cabin' ),
+      	'edit' => __( 'Edit' ),
+      	'edit_item' => __( 'Edit Cabin' ),
+      	'new_item' => __( 'New Cabin' ),
+      	'view' => __( 'View Cabin' ),
+      	'view_item' => __( 'View Cabin' ),
+      	'search_items' => __( 'Search Cabins' ),
+      	'not_found' => __( 'No Cabins found' ),
+      	'not_found_in_trash' => __( 'No Cabins found in Trash' ),
+      	'parent' => __( 'Parent Cabin' ),
+      ),
+ 'public' => true,
+      'menu_position' => 4,
+      'rewrite' => array('slug' => 'cabins'),
+      'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
+      'taxonomies' => array('category', 'post_tag'),
+      'publicly_queryable' => true,
+      'show_ui' => true,
+      'query_var' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+     )
+  );
+}
+
 /**
  * Implement the Custom Header feature.
  */
