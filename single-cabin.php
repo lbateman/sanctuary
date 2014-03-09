@@ -13,23 +13,25 @@ get_header(); ?>
 			<!-- Cabin Images (left column) -->
 			<div class="cabin-images">
 				<!-- Hero image markup -->
-				<div class="cabin-hero">
-					<img src="<?php the_field('hero_image'); ?>" alt="" />
-					<?php $hero = wp_get_attachment_image_src(get_field('hero_image'), 'full'); ?>
-					<img src="<?php echo $hero['url']; ?>" alt="<?php echo $hero['alt']; ?>" />
-				</div> <!-- End of hero image -->
+<!--				<div class="cabin-hero"> -->
+<!--					<img src="<?php the_field('hero_image'); ?>" alt="" /> -->
+<!--					<?php $hero = wp_get_attachment_image_src(get_field('hero_image'), 'full'); ?> -->
+<!--					<img src="<?php echo $hero['url']; ?>" alt="<?php echo $hero['alt']; ?>" /> -->
+<!--				</div> <!-- End of hero image -->
 				
 				<!-- Cabin gallery markup -->
 				<div class="cabin-gallery">
 					<?php $images = get_field('thumbnail_gallery');
 						if ($images): ?>
-							<div class="cabin-images">
-								<ul class="cabin-thumbnails">
+							<div class="flexslider">
+								<ul class="slides clear">
 									<?php foreach ($images as $image): ?>
-										<li><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"></li>
+										<li data-thumb="<?php echo $image['sizes']['thumbnail']; ?>">
+											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+										</li>
 									<?php endforeach; ?>
 								</ul>
-							</div> <!-- End of gallery -->
+							</div> <!-- End of flexslider -->
 						<?php endif; ?>
 				</div> <!-- End of cabin gallery -->
 			</div> <!-- End of cabin images -->
@@ -69,5 +71,5 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+		
 <?php get_footer(); ?>
