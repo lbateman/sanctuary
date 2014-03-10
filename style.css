@@ -1052,7 +1052,7 @@ object {
 *********************************/
 .flexslider {margin: 0; padding: 0;}
 .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides img {max-width: 100%; display: block; margin-left: 19.6%; margin-top: 2em; }
+.flexslider .slides img {max-width: 100%; display: block; margin-top: 2em; }
 .flex-pauseplay span {text-transform: capitalize;}
 
 /* No JavaScript Fallback */
@@ -1081,9 +1081,9 @@ object {
 .flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
 .flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
 
-.flex-control-thumbs {margin: 0.5em 0 0 19.7%; position: static; overflow: hidden;}
+.flex-control-thumbs {margin: 0.5em 0 0 0; position: static; overflow: hidden;}
 .flex-control-thumbs li {float: left; margin: 0.5em 3.9% 0 0;}
 .flex-control-thumbs li:last-of-type {margin-right: 0;}
-.flex-control-thumbs img {max-width: 90px; display: block; opacity: .7; cursor: pointer;}
+.flex-control-thumbs img {max-width: 50px; display: block; opacity: .7; cursor: pointer;}
 .flex-control-thumbs img:hover {opacity: 1;}
 .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
